@@ -5,9 +5,8 @@ from model.tools import saveloader
 class Application:
     def __init__(self) -> None:
         self.__save_loader = saveloader.SaveLoader()
-        self.taskmanager = TaskManager.TaskManager()
 
-    def run(self) -> None:
+    def run(self, taskmanager: type(TaskManager.TaskManager)) -> None:
         """
         Load tasks from json file
         :return:
@@ -18,11 +17,14 @@ class Application:
             status = task['status']
             date_start = task['date_start']
             date_done = task['date_done']
-            self.taskmanager.create_task(description, date_start, date_done, status)
+            taskmanager.create_task(description, date_start, date_done, status)
 
-    def stop(self) -> None:
+    def stop(self, taskmanager: type(TaskManager.TaskManager)) -> None:
         """
         Save all tasks to json file
         :return:
         """
-        self.__save_loader.save(self.taskmanager.tasks_to_save())
+        self.__save_loader.save(taskmanager.tasks_to_save())
+
+    def change_save_loader(self):
+        pass
