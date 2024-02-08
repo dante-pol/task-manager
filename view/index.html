@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TaskManager</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="icon" href="img/icon.png">
+    <!--<script src="eel.js"></script>-->
+    
+</head>
+<body >
+    <div class="main_container" style="width: auto;">
+        <div class="cont_tasks_list" style="width: 300;">
+            <p><h2><img src="img/icon.png" width="100px">Список задач:</h2></p>
+            <div>
+                <label for="">
+                    Здесь перечень задач.
+                    <ul id="tasks_list"></ul>
+                </label>
+                <form action="">
+                    <p tabindex="1">Введите номер задачи:</p>
+                    <input type="number" tabindex="2" id="task_id"><br>
+                    <button type="submit" tabindex="3" id="btn_status">Выполнено</button><br>
+                    <button type="submit" tabindex="4" id="btn_time">Добавить время</button><br>
+                    <button type="submit" tabindex="5" id="btn_delete">Удалить</button>
+                </form>
+            </div>
+        <div>
+        <div class="new_task_table" style="width: 300; float:left;">
+            <form action="" id="new_task_form">
+                <p>Ввод новой задачи</p>
+                <label for="" id="new_task_number">
+                    Здесь будет номер новой задачи. Ставится автоматом
+                </label>
+                <br>
+                <textarea id="new_task_txt" cols="30" rows="10" placeholder="Новая задача" tabindex="6">
+                </textarea>
+                <button type="reset" tabindex="7">Очистить</button>
+                    <br>
+                    <input type="datetime-local" id="new_task_done" tabindex="8"> Тут указывать дату и время завершения<br>
+                    <button type="submit" id="new_task_btn" tabindex="10">Сохранить</button>
+
+            </form>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
