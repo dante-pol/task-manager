@@ -1,4 +1,14 @@
-*{
+
+* {
+    box-sizing: border-box;
+  }
+  
+  ul {
+    margin: 20px 0 20px 0;
+    padding: 0;
+  }
+
+/*{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -42,4 +52,186 @@
     align-items: first baseline;
     border: solid;
     border-color: #299fb4;
+}*/
+
+
+body{
+    background-color: #333333;
 }
+
+input{
+  background-color: #b8b4b4;
+}
+
+.root {
+    width: 70%;
+    background:repeating-linear-gradient(135deg,  #333333, #838385ee, #333333);
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+.create {
+    border: solid;
+    border-color:#333333;
+    border-radius: 0;
+    background-color: gray;
+    margin: 0 0 0 0px;
+}
+
+.create:hover{
+    border: solid;
+    border-color: rgb(102, 99, 99);
+
+}
+
+.create:active{
+    border-color: rgb(8, 8, 8);
+}
+
+  
+  /* Стиль элементов списка */
+  ul li {
+    cursor: pointer;
+    list-style-type: none;
+    position: relative;
+    width: 70%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 30px 8px 12px 40px;
+    margin: 10px;
+    background: #8f8d8d;
+    font-size: 18px;
+    transition: 0.2s;
+    display: flex;
+  
+    /* сделайте элементы списка невыбираемыми */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+.btn_panel{
+  background: #8f8d8d;
+  width: 30%;
+  margin: 0 0 0 30%;
+  display: flex;
+  position:relative
+  
+  }
+
+  ul button{
+    background:grey;
+    border: solid;
+    border-color: #6d6b6b;
+    height: 50px;
+    flex-direction:row;
+    justify-items: first baseline;
+  }
+  
+   ul button:hover{
+    border: solid;
+    border-color: rgb(82, 83, 82);
+   }
+  
+   ul button:active{
+    border-color: rgb(8, 8, 8);
+   }
+  
+.label_panel {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+}
+
+.data_start {
+  font-size: 12px;
+  width: 10%;
+  flex-direction: row;
+  position: relative;
+  margin: 0 20px 0 0;
+}
+
+.data_done {
+  font-size: 12px;
+  width: 10%;
+  flex-direction: row;
+  position: relative;
+  margin: 0 20px 0 0;
+}
+
+.text_task{
+  font-size: 20px;
+  flex-direction: row;
+  position: relative;
+}
+
+  /* Установить все нечетные элементы списка в другой цвет (зебра) */
+ul li:nth-child(odd) {
+    background: #8d8a8a;
+  }
+  
+  /* Более темный фон-цвет при наведении */
+  ul li:hover {
+    background: #b8b4b4;
+  }
+  
+  /* При нажатии на кнопку, добавить цвет фона и вычеркнуть текст */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Добавить "checked" отметить при нажатии на кнопку */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  /* Стиль кнопки "Закрыть" */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Стиль заголовка */
+  .header {
+    padding: 30px 40px;
+    color: rgb(66, 65, 65);
+    text-align: left;
+    font-weight: 100;
+  }
+  
+
+  
+  /* Стиль ввода */
+  .input_new {
+    margin: 0;
+    border: solid;
+    border-color: #333333;
+    border-radius: 0;
+    width: 50%;
+    height: 44px;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  
